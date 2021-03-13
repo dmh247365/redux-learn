@@ -1,0 +1,22 @@
+{
+  "name": "redux-learn",
+  "version": "1.0.0",
+  "description": "## Goals -[ ] Understand what Redux is",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmh247365/redux-learn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmh247365/redux-learn/issues"
+  },
+  "homepage": "https://github.com/dmh247365/redux-learn#readme",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}

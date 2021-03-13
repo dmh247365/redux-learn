@@ -152,17 +152,19 @@ const policies = (listOfPolicies = [], action) => {
 
 We have done:- 
 
+![redux-cycle-Ins-Co-Updated.png](images/png/Redux-Cycle-Ins-Co-Updated.png)
 
-![redux-cycle-Ins-Co.png](images/png/Redux-Cycle-Ins-Co.png)
 
-
+BLAH BLAH BLAH
 
 ---
 
+
+
+
 Summary
 
-![redux-cycle-Ins-Co-Updated.png](images/png/Redux-Cycle-Ins-Co-Updated.png)
-
+![redux-cycle-Ins-Co.png](images/png/Redux-Cycle-Ins-Co.png)
 
 
 1. Action Creator - Person dropping off the form ***- (WE CREATE THIS)***

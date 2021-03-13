@@ -147,10 +147,21 @@ const policies = (listOfPolicies = [], action) => {
 
 ---
 
-Summary
+### So far:- ###
+
+
+We have done:- 
 
 
 ![redux-cycle-Ins-Co.png](images/png/Redux-Cycle-Ins-Co.png)
+
+
+
+---
+
+Summary
+
+![redux-cycle-Ins-Co-Updated.png](images/png/Redux-Cycle-Ins-Co-Updated.png)
 
 
 

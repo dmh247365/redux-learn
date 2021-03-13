@@ -1,9 +1,12 @@
+const { createStore, combineReducers } = require('redux');
+
+
 console.clear();
 
 // Action creators (people dropping off form)
 const createPolicy = (name, amount) => {
   return { //Action (a form in our analogy)
-    type: CREATE_POLICY,
+    type: 'CREATE_POLICY',
     payload: {
       name: name,
       amount: amount
@@ -13,7 +16,7 @@ const createPolicy = (name, amount) => {
 
 const createClaim = (name, claimAmount) => {
   return {
-    type:CREATE_CLAIM,
+    type: 'CREATE_CLAIM',
     payload: {
       name: name,
       claimAmount: claimAmount
@@ -23,7 +26,7 @@ const createClaim = (name, claimAmount) => {
 
 const deletePolicy = (name) => {
   return {
-    type:DELETE_POLICY,
+    type: 'DELETE_POLICY',
     payload: {
       name: name
     }
@@ -57,3 +60,18 @@ const policies = (listOfPolicies = [], action) => {
   }
   return listOfPolicies;
 };
+
+
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimsHistory: claimsHistory,
+  policies: policies
+});
+
+const store = createStore(ourDepartments);
+
+const action = createPolicy('Fred', 40)
+
+store.dispatch(action);
+console.log(store.getState());
+

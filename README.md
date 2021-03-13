@@ -6,9 +6,9 @@
 
 ### Redux is:- 
 1. A state management library.
-2. Its makes creating complex applications (ie with state) easier.
+2. It makes creating complex applications (ie with state) easier.
 3. Not required in order to create a React app.
-4. Not explicitly designed to work with React, its used with other libraries and languages.
+4. Not explicitly designed to work with React, can  be used with other libraries and languages.
 
 ### We have React why do we need Redux?
 The React library is all about rendering content on the screen and handling user interaction.
@@ -49,13 +49,72 @@ blah blah
 ![Forms-png](images/png/Forms.png)
 
 
+```js
+const createPolicy = (name, amount) => { //Action creator (customer in our analogy)
+  return { //Action (a form in our analogy)
+    type: CREATE_POLICY,
+    payload: {
+      name: name,
+      amount: amount
+    }
+  };
+};
+
+const createClaim = (name, claimAmount) => {
+  return {
+    type:CREATE_CLAIM,
+    payload: {
+      name: name,
+      claimAmount: claimAmount
+    }
+  };
+};
+
+const deletePolicy = (name) => {
+  return {
+    type:DELETE_POLICY,
+    payload: {
+      name: name
+    }
+  };
+};
+```
+
+
 Blah blah 
+
+What the different departments need to do:-
+
+
+
+![Accounting-department-png](images/png/Accounting.png)
+
+
+
+![Claims-History-department-png](images/png/Claims-History.png)
+
+
+
+![Policies-department-png](images/png/Policies.png)
+
+
+
+
+
+
+
+
+
+
+
+---
+
+Summary
 
 
 ![redux-cycle-Ins-Co.png](images/png/Redux-Cycle-Ins-Co.png)
 
 
-Blah blah
 
 1. Action Creator - Person dropping off the form
     - A function that returns a plain JS object, ie it creates the action below thats all.

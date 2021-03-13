@@ -48,6 +48,7 @@ blah blah
 
 ![Forms-png](images/png/Forms.png)
 
+So what would this look like in our JS code:
 
 ```js
 const createPolicy = (name, amount) => { //Action creator (customer in our analogy)
@@ -89,15 +90,52 @@ What the different departments need to do:-
 
 ![Accounting-department-png](images/png/Accounting.png)
 
+How would this look in our code:-  
+
+```js
+// Reducer (Department - Accounting)
+const accounting = (bagOfMoney = 100, action) => {
+  if(action.type === 'CREATE_CLAIM') {
+    return bagOfMoney - action.payload.claimAmount;
+  } else if(action.type === 'CREATE_POLICY') {
+    return bagOfMoney + action.payload.amount;
+  }
+  return bagOfMoney;
+};
+```
 
 
 ![Claims-History-department-png](images/png/Claims-History.png)
 
+How would this look in our code:-  
 
+```js
+
+// Reducer (Department - Claims History)
+const claimsHistory = (oldListOfClaims = [], action) => {
+  if(action.type === 'CREATE_CLAIM') {
+    return [...oldListOfClaims, action.payload];
+  }
+  return oldListOfClaims;
+};
+```
 
 ![Policies-department-png](images/png/Policies.png)
 
+How would this look in our code:-  
 
+```js
+
+// Reducer (Department - Policies)
+const policies = (listOfPolicies = [], action) => {
+  if(action.type === 'CREATE_POLICY') {
+    return [...listOfPolicies, action.payload.name];
+  } else if (action.type === 'DELETE_POLICY') {
+    return listOfPolicies.filter(name => name !== action.payload.name);
+  }
+  return listOfPolicies;
+};
+```
 
 
 
@@ -116,22 +154,22 @@ Summary
 
 
 
-1. Action Creator - Person dropping off the form
+1. Action Creator - Person dropping off the form ***- (WE CREATE THIS)***
     - A function that returns a plain JS object, ie it creates the action below thats all.
-2. Action - The form
+2. Action - The form ***- (WE CREATE THIS)***
     - The plain JS object above is referred to as an action.
     - It has `type` & `payload` properties.
       - `type property` describes some change that want to make inside of our data.
       - `payload property` describes what we want to change to.
     - so it basically describes what data we want to change & how we want it to change. 
-3. Dispatch - Form receiver
+3. Dispatch - Form receiver **- PART OF REDUX**
    - The dispatch function, takes in the action object and makes copies of it and passes those copies off to different places.
-4. Reducers - Departments
+4. Reducers - Departments ***- (WE CREATE THESE)***
    - A reducer is a function that is responsible for taking in an action and some existing amount of data.
      - It process that action by type (if applicable)
      - Makes changes to the applicable data
      - Returns that 'updated' data 
-5. State - Compiled department data
+5. State - Compiled department data **- PART OF REDUX**
    - It's an object.
    - It is the central repository, that holds all the data produced/updated by our reducers.
 

@@ -46,17 +46,10 @@ blah blah
 blah blah
 
 
+![Forms-png](images/png/Forms.png)
 
 
-
-
-
-
-
-
-
-
-
+Blah blah 
 
 
 ![redux-cycle-Ins-Co.png](images/png/Redux-Cycle-Ins-Co.png)
@@ -73,10 +66,14 @@ Blah blah
       - `payload property` describes what we want to change to.
     - so it basically describes what data we want to change & how we want it to change. 
 3. Dispatch - Form receiver
-   - cccc
+   - The dispatch function, takes in the action object and makes copies of it and passes those copies off to different places.
 4. Reducers - Departments
-   - cccc
+   - A reducer is a function that is responsible for taking in an action and some existing amount of data.
+     - It process that action by type (if applicable)
+     - Makes changes to the applicable data
+     - Returns that 'updated' data 
 5. State - Compiled department data
-   - ccc
+   - It's an object.
+   - It is the central repository, that holds all the data produced/updated by our reducers.
 
 flflflflf

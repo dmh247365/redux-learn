@@ -1,8 +1,8 @@
 # redux-learn
 
 ## Goals
--[ ] Understand what Redux is
-
+-[ ] Understand what Redux is.
+-[ ] How it relates to React
 
 ### Redux is:- 
 1. A state management library.
@@ -12,7 +12,7 @@
 
 ### We have React why do we need Redux?
 The React library is all about rendering content on the screen and handling user interaction.
-Its primary role is not around maintaining, updating, deleting or otherwise handling data, thus we make redux in charge of this.  
+Its primary role is not around maintaining, updating, deleting or otherwise handling data, thus we can make redux in charge of this.  
 
 
 ## The Redux Cycle
@@ -24,22 +24,31 @@ Basically what happens internally inside of Redux.
 ![redux-cycle-png](images/png/Redux-Cycle.png)
 
 
-Analogy to explain Redux:-
+## Analogy to explain Redux:-
 
 We own an insurance company, in which our customers have:-
 - policy (customer purchases/holds a `policy`)
 - claim ( a customer can make a `claim`)
 
-
 ![Our-Insurance-Co-png](images/png/Our-Insurance-Co.png)
 
-blah blah blah
+Our insurance company has three departments, 
+- Claims History
+  - Stores/updates list of claimants
+- Policies
+  -  Stores/updates the list of policy holders (by name)
+- Accounting
+  - Controls the bad of cash, ie money in (new policies), money  out (claims made)
+
+The Departments operate in isolation, in that they do not communicate with each other, each department receives its information from the receiver (front office).
+
+The receiver (front office), is in fact a single person called lazy Brian, for whom inertia is his favourite pastime. When Brian receives a form he copies it and sends it out to all three departments.
 
 
 ![Our-Insurance-Co-Management-png](images/png/Our-Insurance-Co-Management.png)
 
 
-blah blah
+After watching Wolf of Wall Street, the management decide the only way to make big bucks is to issue an IPO, in order to progress matters they want hourly reports from departments.
 
 ![Our-Ins-Co-central-repo-png](images/png/Our-Ins-Co-central-repo.png)
 

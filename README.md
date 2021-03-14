@@ -50,9 +50,15 @@ The receiver (front office), is in fact a single person called lazy Brian, for w
 
 After watching Wolf of Wall Street, the management decide the only way to make big bucks is to issue an IPO, in order to progress matters they want hourly reports from departments.
 
+Currently on an hourly basis the management team have to leave their important work, of playing team darts... and go to each department to get the latest update/cash total.
+
 ![Our-Ins-Co-central-repo-png](images/png/Our-Ins-Co-central-repo.png)
 
-blah blah
+Donnie one of the management team, decide that the doesn't want to leave the team meetings anymore and dictates that all the reports and bag of cash will be held in one location outside the directors meeting room. Lazy Brian, upon realising that he will have to do some work, decide to retire as he says to 'put his feet up'. The new receiver 'dynamic' Dave, has the following duties:-
+
+1. - when a form is received from a customer, a three copies are made (one for each department)
+2. - that departments list/total bag of money is taken from the central location
+3. - the above two are handed to the relevant department
 
 
 ![Forms-png](images/png/Forms.png)

@@ -93,12 +93,12 @@ There will be three types of form required
 
 3. - `DELETE POLICY`
    - The payload information is required by the Policies dept.
-    - Policy dept --> to remove the policy holders name from the policies list.
+     - Policy dept --> to remove the policy holders name from the policies list.
 
 
                 -----------------------------------------------------------------------------
 
-So what would this look like in our JS code:
+## So what would this look like in our JS code:
 
 ```js
 const createPolicy = (name, amount) => { //Action creator (customer in our analogy)
@@ -130,11 +130,12 @@ const deletePolicy = (name) => {
   };
 };
 ```
+So we have created the three forms `Actions` and also how each for will be intialised `Action creator`.
+
+                -----------------------------------------------------------------------------
 
 
-Blah blah 
-
-What the different departments need to do:-
+## What the three different departments will do:-
 
 
 
@@ -153,6 +154,8 @@ const accounting = (bagOfMoney = 100, action) => {
   return bagOfMoney;
 };
 ```
+
+                -----------------------------------------------------------------------------
 
 
 ![Claims-History-department-png](images/png/Claims-History.png)
@@ -187,33 +190,31 @@ const policies = (listOfPolicies = [], action) => {
 };
 ```
 
-
-
-
-
-
                 -----------------------------------------------------------------------------
 
 
 
-### So far:- ###
+### What we have:-
 
-
-We have done:- 
 
 ![redux-cycle-Ins-Co-Updated.png](images/png/Redux-Cycle-Ins-Co-Updated.png)
 
+### We create points 1, 2 & 3
+Point 2 - Every action will have a
+  - `type` which is convention to have as an uppercase string.
+  - `payload` which is an object containing information required by the `reducer` functions.
 
-BLAH BLAH BLAH
+Point 1 - This is the function (`Action creator`) we create to give us the object (`action`) we want.
 
+Point 3 - This is the function (`Reducer`) we create to handle the Action.
+
+Redux gives us 4,5 & 6
 
 
                 -----------------------------------------------------------------------------
 
 
-
-
-Summary
+## In Summary
 
 ![redux-cycle-Ins-Co.png](images/png/Redux-Cycle-Ins-Co.png)
 

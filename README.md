@@ -24,6 +24,8 @@ Basically what happens internally inside of Redux.
 ![redux-cycle-png](images/png/Redux-Cycle.png)
 
 
+                -----------------------------------------------------------------------------
+
 ## Analogy to explain Redux:-
 
 We own an insurance company, in which our customers have:-
@@ -44,13 +46,20 @@ The Departments operate in isolation, in that they do not communicate with each 
 
 The receiver (front office), is in fact a single person called lazy Brian, for whom inertia is his favourite pastime. When Brian receives a form he copies it and sends it out to all three departments.
 
+After watching Wolf of Wall Street, the management decide the only way to make big bucks is to issue an IPO, in order to progress matters they want hourly reports from departments.
+
+Currently on an hourly basis the management team have to leave their important work, of playing team darts... and go to each department to get the latest update/cash total.
+
+
+                -----------------------------------------------------------------------------
+
+
 
 ![Our-Insurance-Co-Management-png](images/png/Our-Insurance-Co-Management.png)
 
 
-After watching Wolf of Wall Street, the management decide the only way to make big bucks is to issue an IPO, in order to progress matters they want hourly reports from departments.
+                -----------------------------------------------------------------------------
 
-Currently on an hourly basis the management team have to leave their important work, of playing team darts... and go to each department to get the latest update/cash total.
 
 ![Our-Ins-Co-central-repo-png](images/png/Our-Ins-Co-central-repo.png)
 

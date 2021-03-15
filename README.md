@@ -199,7 +199,7 @@ const policies = (listOfPolicies = [], action) => {
 
 ![redux-cycle-Ins-Co-Updated.png](images/png/Redux-Cycle-Ins-Co-Updated.png)
 
-### We create points 1, 2 & 3
+## We create points 1, 2 & 3
 Point 2 - Every action will have a
   - `type` which is convention to have as an uppercase string.
   - `payload` which is an object containing information required by the `reducer` functions.
@@ -208,8 +208,13 @@ Point 1 - This is the function (`Action creator`) we create to give us the objec
 
 Point 3 - This is the function (`Reducer`) we create to handle the Action.
 
-Redux gives us 4,5 & 6
+## Redux gives us 4,5 & 6
 
+Point 5 - whilst we create the `reducers` we must tell Redux about them, so that Redux can create a single overall reducer ie `combined reducer` and also create a redux instance ie `createStore`.
+
+Point 4 - `dispatch` is just a method that we call passing into it the action creator.
+
+Point 6 - This is our `state` ie our central location of data.
 
                 -----------------------------------------------------------------------------
 

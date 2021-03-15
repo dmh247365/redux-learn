@@ -212,9 +212,9 @@ Point 3 - This is the function (`Reducer`) we create to handle the Action.
 
 Point 5 - whilst we create the `reducers` we must tell Redux about them, so that Redux can create a single overall reducer ie `combined reducer` and also create a redux instance ie `createStore`.
 
-Point 4 - `dispatch` is just a method that we call passing into it the action creator.
+Point 4 - `dispatch` is just a method that we call passing into it the action creator (important note: dispatch runs an execution of our whole Redux cycle).
 
-Point 6 - This is our `state` ie our central location of data.
+Point 6 - This is our `state` ie our central location of data, which we can printout/query at any time. we can only access/modify the state through the use of `getState` & `dispatch`.
 
                 -----------------------------------------------------------------------------
 
@@ -226,14 +226,15 @@ Point 6 - This is our `state` ie our central location of data.
 
 1. Action Creator - Person dropping off the form ***- (WE CREATE THIS)***
     - A function that returns a plain JS object, ie it creates the action below thats all.
+      - So this is what we use when we want to change the state/data in our application.
 2. Action - The form ***- (WE CREATE THIS)***
     - The plain JS object above is referred to as an action.
     - It has `type` & `payload` properties.
       - `type property` describes some change that want to make inside of our data.
       - `payload property` describes what we want to change to.
-    - so it basically describes what data we want to change & how we want it to change. 
+    - So this is the object we created above that describes what data we want to change & how we want it to change. 
 3. Dispatch - Form receiver **- PART OF REDUX**
-   - The dispatch function, takes in the action object and makes copies of it and passes those copies off to different places.
+   - The dispatch function, takes in the action object and makes copies of it and passes those copies off to different places (or reducers).
 4. Reducers - Departments ***- (WE CREATE THESE)***
    - A reducer is a function that is responsible for taking in an action and some existing amount of data.
      - It process that action by type (if applicable)
@@ -241,6 +242,16 @@ Point 6 - This is our `state` ie our central location of data.
      - Returns that 'updated' data 
 5. State - Compiled department data **- PART OF REDUX**
    - It's an object.
-   - It is the central repository, that holds all the data produced/updated by our reducers.
+   - It is the central repository, that holds in an object all the data produced/updated by our reducers.
 
 
+                -----------------------------------------------------------------------------
+
+
+To see our coded Redux working just do:-
+
+```js
+$node app
+```
+
+                -----------------------------------------------------------------------------

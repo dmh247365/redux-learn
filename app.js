@@ -75,3 +75,18 @@ const action = createPolicy('Fred', 40)
 store.dispatch(action);
 console.log(store.getState());
 
+
+store.dispatch(createPolicy('Bob', 10));
+store.dispatch(createPolicy('Kira', 100));
+store.dispatch(createPolicy('Kim', 50));
+
+console.log(store.getState());
+
+
+store.dispatch(createClaim('Bob', 50));
+console.log(store.getState());
+
+store.dispatch(deletePolicy('Kim'));
+console.log(store.getState());
+
+

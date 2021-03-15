@@ -1,8 +1,8 @@
 # redux-learn
 
 ## Goals
--[ ] Understand what Redux is.
--[ ] How it relates to React
+- [ ] Understand what Redux is.
+- [ ] How it relates to React.
 
 ### Redux is:- 
 1. A state management library.
@@ -46,6 +46,13 @@ The Departments operate in isolation, in that they do not communicate with each 
 
 The receiver (front office), is in fact a single person called lazy Brian, for whom inertia is his favourite pastime. When Brian receives a form he copies it and sends it out to all three departments.
 
+
+                -----------------------------------------------------------------------------
+
+## Information held in each department
+
+![Our-Insurance-Co-Management-png](images/png/Our-Insurance-Co-Management.png)
+
 After watching Wolf of Wall Street, the management decide the only way to make big bucks is to issue an IPO, in order to progress matters they want hourly reports from departments.
 
 Currently on an hourly basis the management team have to leave their important work, of playing team darts... and go to each department to get the latest update/cash total.
@@ -54,23 +61,42 @@ Currently on an hourly basis the management team have to leave their important w
                 -----------------------------------------------------------------------------
 
 
-
-![Our-Insurance-Co-Management-png](images/png/Our-Insurance-Co-Management.png)
-
-
-                -----------------------------------------------------------------------------
-
+## Switch information to a central location
 
 ![Our-Ins-Co-central-repo-png](images/png/Our-Ins-Co-central-repo.png)
 
 Donnie one of the management team, decide that the doesn't want to leave the team meetings anymore and dictates that all the reports and bag of cash will be held in one location outside the directors meeting room. Lazy Brian, upon realising that he will have to do some work, decide to retire as he says to 'put his feet up'. The new receiver 'dynamic' Dave, has the following duties:-
 
-1. - when a form is received from a customer, a three copies are made (one for each department)
+1. - when a form is received from a customer, three copies are made (one for each department)
 2. - that departments list/total bag of money is taken from the central location
 3. - the above two are handed to the relevant department
 
+                -----------------------------------------------------------------------------
+
+## Form: Structure & Types
 
 ![Forms-png](images/png/Forms.png)
+
+Every form received will consist of two distinct sections, `Type` and `Payload`.
+
+There will be three types of form required
+
+1. - `CREATE POLICY`
+   - The payload information will be required by the Policies dept & Accounting dept.
+     - Policy dept --> to create a policy holder (ie record name on policies list)
+     - Accounting dept --> for the cash amount, to add to the bag of cash. 
+
+2. - `CREATE CLAIM`
+   - The payload information will be required by the Claims History dept & Accounting dept.
+     - Claims History dept --> to record the name of the claimant.
+     - Accounting dept --> to payout the claim amount from the bag of cash.
+
+3. - `DELETE POLICY`
+   - The payload information is required by the Policies dept.
+    - Policy dept --> to remove the policy holders name from the policies list.
+
+
+                -----------------------------------------------------------------------------
 
 So what would this look like in our JS code:
 
@@ -166,10 +192,9 @@ const policies = (listOfPolicies = [], action) => {
 
 
 
+                -----------------------------------------------------------------------------
 
 
-
----
 
 ### So far:- ###
 
@@ -181,7 +206,9 @@ We have done:-
 
 BLAH BLAH BLAH
 
----
+
+
+                -----------------------------------------------------------------------------
 
 
 
@@ -210,4 +237,4 @@ Summary
    - It's an object.
    - It is the central repository, that holds all the data produced/updated by our reducers.
 
-flflflflf
+
